@@ -1,8 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import shoppingCartReducer from './reducer'
+import {PorductCatalog} from './ProductCatalogData'
 
 export default configureStore({
   reducer: {
-    counter: counterReducer,
+    store: shoppingCartReducer
   },
+  preloadedState : {store : PorductCatalog}
 });
