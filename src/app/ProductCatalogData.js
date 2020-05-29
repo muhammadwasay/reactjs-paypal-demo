@@ -21,11 +21,14 @@ export const PorductCatalog = {
     cart: [],
     checkout: {
         noOfItems : 0,
-        paymentAmount : 0.0
+        paymentAmount : 1.33
     },
     paymentStatus : {
         status : "SUCCESS",
-        orderNo : "",
-        emailAddress : ""
+        orderId : "",
+        name : "",
+        emailAddress : "",
+        updateTime : "",
+        amount : ""
     }
 }

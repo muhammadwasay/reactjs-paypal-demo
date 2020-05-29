@@ -6,9 +6,12 @@ const PaymentStatusPage = ({ paymentStatusData }) => (
     <Container>
         <div>
             <h3>Payment Status</h3>
+            Order No : {paymentStatusData.orderId} <br/>
             Payment Status : {paymentStatusData.status} <br/>
-            Order No : {paymentStatusData.orderNo} <br/>
+            Name : {paymentStatusData.name} <br/>
             Email : {paymentStatusData.emailAddress} <br/>
+            Time : {paymentStatusData.updateTime} <br/>
+            Amount : {paymentStatusData.amount} <br/>
         </div>
     </Container>
 );

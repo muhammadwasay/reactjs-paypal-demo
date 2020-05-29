@@ -1,6 +1,5 @@
 import React from "react";
 import { connect } from "react-redux";
-import {useScript} from "../app/LoadScript";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import PayPalButton from "./PayPal";
