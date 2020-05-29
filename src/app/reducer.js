@@ -5,8 +5,7 @@ import {
     ADD_PRODUCT,
     PROCEED_TO_CHECKOUT,
     AvailabilityFilters,
-    PAYMENT_STATUS_UPDATE,
-    PaymentStatus
+    PAYMENT_STATUS_UPDATE
 } from './actions'
 const { SHOW_ALL } = AvailabilityFilters
 

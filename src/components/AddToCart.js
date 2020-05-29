@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { addToCart } from "../app/actions";
 import Button from "react-bootstrap/Button";
+import {withRouter} from "react-router-dom";
 
 class AddToCartButton extends React.Component {
   constructor(props) {
@@ -25,4 +26,4 @@ class AddToCartButton extends React.Component {
   }
 }
 
-export default connect(null,{ addToCart })(AddToCartButton);
+export default withRouter(connect(null,{ addToCart })(AddToCartButton));

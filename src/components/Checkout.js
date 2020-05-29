@@ -2,11 +2,9 @@ import React from "react";
 import { connect } from "react-redux";
 import { proceedToCheckout } from "../app/actions";
 import Button from "react-bootstrap/Button";
+import {withRouter} from "react-router-dom";
 
 class CheckoutButton extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   handleCheckout = () => {
     let noOfItems = 0;
@@ -27,7 +25,7 @@ class CheckoutButton extends React.Component {
     return (
         <div>
           <Button variant="primary"
-                  onClick={this.handleCheckout}>
+                  onClick={this.handleCheckout} href={"#checkout"}>
             Checkout
           </Button>
         </div>
@@ -40,4 +38,4 @@ const mapStateToProps = state => {
   return { cartData };
 };
 
-export default connect(mapStateToProps,{ proceedToCheckout })(CheckoutButton);
+export default withRouter(connect(mapStateToProps,{ proceedToCheckout })(CheckoutButton));

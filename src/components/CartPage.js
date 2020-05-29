@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import Cart from "./Cart";
 import CheckoutButton from "./Checkout";
+import {withRouter} from "react-router-dom";
 
 const CartPage = ({ cartData }) => (
     <div>
@@ -15,4 +16,4 @@ const mapStateToProps = state => {
     const cartData = state.store.cart;
     return { cartData };
 };
-export default connect(mapStateToProps)(CartPage);
+export default withRouter(connect(mapStateToProps)(CartPage));

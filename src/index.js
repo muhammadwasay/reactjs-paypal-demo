@@ -5,11 +5,14 @@ import ShoppingCartApp from './ShoppingCartApp'
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import store from './app/store';
+import { HashRouter as Router, Route } from 'react-router-dom'
 
 const rootElement = document.getElementById("root");
 render(
     <Provider store={store}>
-        <ShoppingCartApp />
+        <Router>
+            <Route path="/" component={ShoppingCartApp} />
+        </Router>
     </Provider>,
     rootElement
 );

@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import PayPalButton from "./PayPal";
+import {withRouter} from "react-router-dom";
 
 const CheckoutPage = ({ checkoutData }) => {
 
@@ -32,4 +33,4 @@ const mapStateToProps = state => {
     const checkoutData = state.store.checkout;
     return { checkoutData };
 };
-export default connect(mapStateToProps)(CheckoutPage);
+export default withRouter(connect(mapStateToProps)(CheckoutPage));

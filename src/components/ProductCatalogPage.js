@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import Catalog from "./Catalog";
+import { withRouter } from 'react-router-dom'
 
 const ProductCatalogPage = ({ catalogData }) => (
     <div>
@@ -13,4 +14,4 @@ const mapStateToProps = state => {
     const catalogData = state.store.products;
     return { catalogData };
 };
-export default connect(mapStateToProps)(ProductCatalogPage);
+export default withRouter(connect(mapStateToProps)(ProductCatalogPage));

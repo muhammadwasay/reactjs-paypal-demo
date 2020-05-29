@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import {connect} from "react-redux";
-import Button from "react-bootstrap/Button";
 import {useScript} from "../app/LoadScript";
+import {withRouter} from "react-router-dom";
 
 const PayPalButton = ({checkoutData}) => {
     const payPalButtonRef = useRef();
@@ -12,6 +12,10 @@ const PayPalButton = ({checkoutData}) => {
     const [buttonRendered, setButtonRendered] = useState(false);
 
     useEffect(() => {
+        if(scriptError){
+            console.log("script loading error"+scriptError);
+        }
+
         if(scriptLoaded){
             setContainerRendered(true);
         }
@@ -50,7 +54,7 @@ const PayPalButton = ({checkoutData}) => {
 
                 }).render(payPalButtonRef.current);
         }
-    },[scriptLoaded, containerRendered, buttonRendered, checkoutData.paymentAmount]);
+    },[scriptLoaded, scriptError, containerRendered, buttonRendered, checkoutData.paymentAmount]);
 
     return (
         <>
@@ -68,4 +72,4 @@ const mapStateToProps = state => {
     return {checkoutData};
 };
 
-export default connect(mapStateToProps)(PayPalButton);
+export default withRouter(connect(mapStateToProps)(PayPalButton));

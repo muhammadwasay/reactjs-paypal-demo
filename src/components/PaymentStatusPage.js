@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import Container from "react-bootstrap/Container";
+import {withRouter} from "react-router-dom";
 
 const PaymentStatusPage = ({ paymentStatusData }) => (
     <Container>
@@ -20,4 +21,4 @@ const mapStateToProps = state => {
     const paymentStatusData = state.store.paymentStatus;
     return { paymentStatusData };
 };
-export default connect(mapStateToProps)(PaymentStatusPage);
+export default withRouter(connect(mapStateToProps)(PaymentStatusPage));
