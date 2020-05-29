@@ -19,16 +19,20 @@ export const PorductCatalog = {
         }
     ],
     cart: [],
-    checkout: {
-        noOfItems : 0,
+    checkout: {},
+    paymentStatus : {}
+}
+
+/*
+checkout: {
+    noOfItems : 0,
         paymentAmount : 1.33
-    },
-    paymentStatus : {
-        status : "SUCCESS",
+},
+paymentStatus : {
+    status : "SUCCESS",
         orderId : "",
         name : "",
         emailAddress : "",
         updateTime : "",
         amount : ""
-    }
-}
+}*/

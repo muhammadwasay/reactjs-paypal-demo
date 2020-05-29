@@ -58,9 +58,7 @@ const PayPalButton = ({checkoutData}) => {
 
     return (
         <>
-            <div>{checkoutData.paymentAmount}</div>
             <div>
-                {/*{containerRendered ? <div id="paypal-button-container"></div> : 'Loading...'}*/}
                 {containerRendered ? <div ref={payPalButtonRef} /> : 'Loading...'}
             </div>
         </>

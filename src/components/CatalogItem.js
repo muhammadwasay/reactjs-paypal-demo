@@ -12,21 +12,22 @@ const CatalogItem = ({catalogItem}) => (
                 <small>Product ID : {catalogItem.pid}</small>
             </Row>
             <Row>
+                <h5>{catalogItem.title}</h5>
+            </Row>
+            <Row>
                 <Col>
-                    <Image width={58}
-                           height={55}
-                           src={catalogItem.images[0]} thumbnail/>
+                    <Image width={200}
+                           height={200}
+                           src={catalogItem.images[0]}/>
                 </Col>
             </Row>
             <Row>
-                <strong>${catalogItem.price}</strong>
+                <h5><strong>${catalogItem.price}</strong></h5>
             </Row>
             <Row>
                 <AddToCartButton catalogItem={catalogItem}/>
             </Row>
-            <Row>
-                <p>{catalogItem.title}</p>
-            </Row>
+            <br/>
         </Container>
     </>
 )

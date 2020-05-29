@@ -1,8 +1,7 @@
 import React from 'react'
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import Button from "react-bootstrap/Button";
-import Badge from "react-bootstrap/Badge";
+import CartButton from "./CartButton";
 
 const NavigationBar = () => (
     <>
@@ -21,9 +20,9 @@ const NavigationBar = () => (
                     height="30"
                     className="d-inline-block align-top"
                 />{' '}
-                React PayPal Integration </Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
+                React PayPal Integration
+            </Navbar.Brand>
+            <Navbar id="basic-navbar-nav">
                 <Nav variant="tabs" defaultActiveKey="#about">
                     <Nav.Item>
                         <Nav.Link eventKey="about" href="#about">About</Nav.Link>
@@ -32,13 +31,10 @@ const NavigationBar = () => (
                         <Nav.Link eventKey="store" href="#store">Store</Nav.Link>
                     </Nav.Item>
                 </Nav>
-            </Navbar.Collapse>
-            <Navbar.Collapse className="justify-content-end">
-                <Button variant="primary" href="#cart">
-                    Cart <Badge variant="light">0</Badge>
-                    <span className="sr-only">items in cart</span>
-                </Button>
-            </Navbar.Collapse>
+            </Navbar>
+            <Navbar className="justify-content-end">
+                <CartButton/>
+            </Navbar>
         </Navbar>
     </>
 )
