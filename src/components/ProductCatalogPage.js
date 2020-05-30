@@ -10,7 +10,7 @@ const ProductCatalogPage = ({catalogData}) => (
     <>
         <Container>
             <Row>
-                <h3>Product Catalog Page</h3>
+                <h3>Product Catalog</h3>
             </Row>
             <Row>
                 <Catalog catalogData={catalogData}/>

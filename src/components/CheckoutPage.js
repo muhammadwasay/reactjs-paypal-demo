@@ -10,7 +10,7 @@ const CheckoutPage = ({checkoutData}) => {
     return (
         <Container>
             <Row>
-                <h3>Checkout Page</h3>
+                <h3>Checkout</h3>
             </Row>
             {checkoutData.noOfItems ? <><Row>
                 <div>

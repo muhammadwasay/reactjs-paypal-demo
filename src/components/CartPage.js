@@ -10,9 +10,10 @@ const CartPage = ({cartData}) => (
     <Container>
         <Row>
             <div>
-                <h3>Cart Page</h3>
-                <Cart cartData={cartData}/>
+                <h3>Cart</h3>
                 {cartData.length ? <CheckoutButton/> : <div>Your CART is empty!</div>}
+                <br/>
+                <Cart cartData={cartData}/>
             </div>
         </Row>
     </Container>

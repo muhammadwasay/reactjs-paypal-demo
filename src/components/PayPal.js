@@ -37,14 +37,15 @@ const PayPalButton = ({checkoutData}) => {
 
                     onApprove: async (data, actions) => {
                         const order = await actions.order.capture();
+                        window.alert("Order Status: "+order.status+" OrderId: "+order.id+".")
                         //setPaidFor(true);
-                        console.log(order);
+                        /*console.log(order);
                         console.log(order.id);
                         console.log(order.update_time);
                         console.log(order.payer.email_address);
                         console.log(order.payer.name.given_name);
                         console.log(order.status);
-                        console.log(order.purchase_units[0].amount.value);
+                        console.log(order.purchase_units[0].amount.value);*/
                     },
 
                     onError: err => {
