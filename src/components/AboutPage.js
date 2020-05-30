@@ -67,7 +67,7 @@ const AboutPage = () => (
                             </tr>
                             <tr>
                                 <td>Deployment</td>
-                                <td><a href="https://muhammadwasay.github.io/index" rel="nofollow">GitHub pages</a></td>
+                                <td><a href="https://muhammadwasay.github.io/index.html" rel="nofollow">GitHub pages</a></td>
                             </tr>
                             </tbody>
                         </table>
